@@ -44,12 +44,19 @@ def search(request):
         if city:
             queryset_list = queryset_list.filter(city__search=city)
 
-#   State
+    #   State
     if 'state' in request.GET:
         state = request.GET['state']
-        #   Search for the exact state
+        #   Search for the exact state (dropdown has full names, but admin input is postal abbreviation)
         if state:
             queryset_list = queryset_list.filter(state__iexact=state)
+    
+    #   Bedrooms
+    if 'bedrooms' in request.GET:
+        bedrooms = request.GET['bedrooms']
+        #   Search for anything up to up the specified number of bedrooms 
+        if bedrooms:
+            queryset_list = queryset_list.filter(bedrooms__lte=bedrooms)
 
     context = {
         'price_choices': price_choices,
