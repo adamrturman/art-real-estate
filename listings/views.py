@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.contrib.postgres import search
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from .choices import price_choices, bedroom_choices, state_choices
 
@@ -35,6 +36,13 @@ def search(request):
         #   Search the entire description for keywords
         if keywords:
             queryset_list = queryset_list.filter(description__icontains=keywords)
+    
+    #   City
+    if 'city' in request.GET:
+        city = request.GET['city']
+        #   Search for the exact city
+        if city:
+            queryset_list = queryset_list.filter(city__search=city)
 
     context = {
         'price_choices': price_choices,
