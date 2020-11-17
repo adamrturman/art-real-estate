@@ -58,6 +58,13 @@ def search(request):
         if bedrooms:
             queryset_list = queryset_list.filter(bedrooms__lte=bedrooms)
 
+    #   Price
+    if 'price' in request.GET:
+        price = request.GET['price']
+        #   Search for anything up to up the specified price 
+        if price:
+            queryset_list = queryset_list.filter(price__lte=price)
+
     context = {
         'price_choices': price_choices,
         'bedroom_choices': bedroom_choices,
