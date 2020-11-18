@@ -47,9 +47,10 @@ def search(request):
     #   State
     if 'state' in request.GET:
         state = request.GET['state']
-        #   Search for the exact state (dropdown has full names, but admin input is postal abbreviation)
+        #   Search for the exact state (full name required)
         if state:
-            queryset_list = queryset_list.filter(state__iexact=state)
+            # queryset_list = queryset_list.filter(state__iexact=state)
+            queryset_list=queryset_list.filter(state__iexact=state_choices[state])
     
     #   Bedrooms
     if 'bedrooms' in request.GET:
@@ -69,7 +70,8 @@ def search(request):
         'price_choices': price_choices,
         'bedroom_choices': bedroom_choices,
         'state_choices': state_choices,
-        'listings': queryset_list
+        'listings': queryset_list,
+        'values': request.GET
     }
 
     return render(request, 'listings/search.html', context)
