@@ -1,4 +1,6 @@
 from django.shortcuts import render
 
 def contact(request):
-    return
+    if request.method == 'POST':
+        print('Hello world')
+        return
