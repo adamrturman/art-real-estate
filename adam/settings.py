@@ -86,6 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'artdb',
         'USER': 'adamrturman',
+        'PASSWORD': ''
         'HOST': 'localhost'
 
     }
