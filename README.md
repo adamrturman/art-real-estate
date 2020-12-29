@@ -74,4 +74,4 @@ ART Real Estate is a full-stack web application that provides role-based managem
 
 #### Screenshot:
 
-[Screenshot](https://imgur.com/6TeHFa5)
+![Screenshot](https://user-images.githubusercontent.com/67024033/103305488-e04b7980-49d0-11eb-8f82-4832a0517338.png)
