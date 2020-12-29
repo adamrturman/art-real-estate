@@ -14,7 +14,11 @@ a:visited {
 }
 
 div.breadcrumbs {
+<<<<<<< HEAD
     background: #30caa0;
+=======
+    background: #10284e;
+>>>>>>> ff349664b16d08f938be83e8b3071abc8dae68cf
     color:#10284e;
 }
 
@@ -23,7 +27,11 @@ div.breadcrumbs a {
 }
 
 .module h2, .module caption, inline-group h2 {
+<<<<<<< HEAD
     background: #30caa0;
+=======
+    background: #10284e;
+>>>>>>> ff349664b16d08f938be83e8b3071abc8dae68cf
 }
 
 .button, input[type=submit], input[type=button], .submit-row input, a.button, input[type=submit].default, .submit-row input.default {
