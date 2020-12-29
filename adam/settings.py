@@ -81,16 +81,16 @@ WSGI_APPLICATION = 'adam.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'artdb',
-#         'USER': 'adamrturman',
-#         'PASSWORD': 'new_password',
-#         'HOST': 'localhost'
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'artdb',
+        'USER': 'adamrturman',
+        'PASSWORD': 'new_password',
+        'HOST': 'localhost'
 
-#     }
-# }
+    }
+}
 
 
 # Password validation
