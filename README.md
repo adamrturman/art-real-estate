@@ -46,7 +46,7 @@ ART Real Estate is a full-stack web application that provides role-based managem
 - Create a new database for the project with `CREATE DATABASE <your_database_name>;`.
 - Exit PSQL shell with `/q`.
 - Fork and clone this repository.
-- Once inside the directory, start the virtual environment with `pip envshell`.
+- Once inside the directory, start the virtual environment with `pipenv shell`.
 - Run `pipenv install` to install dependencies.
 - Initialize the database with `python3 manage.py makemigrations` followed by `python3 manage.py migrate`.
 - Run the development server with `python3 manage.py runserver`.
